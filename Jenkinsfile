@@ -24,10 +24,11 @@ pipeline {
         }
 
         stage('Test App') {
-            steps {
-                sh 'curl http://localhost:3000'
-            }
-        }
+    	   steps {
+        	sh 'sleep 10'
+        	sh 'curl -f http://localhost:3000'
+    	    }
+	}
     }
 }
 
